@@ -7,5 +7,10 @@ import {DatahubService} from './services/datahub.service'
 })
 export class AppComponent {
   title = 'delhi';
-  
+  users: any ;
+  constructor(private userdata: DatahubService) {
+    
+    console.warn(" user details : ", userdata.users());
+    this.users = userdata.users();
+  }
 }
