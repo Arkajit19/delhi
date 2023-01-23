@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatahubService } from '../services/datahub.service';
+import { UserdataService } from '../services/userdata.service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -7,9 +8,11 @@ import { DatahubService } from '../services/datahub.service';
 })
 export class FooterComponent implements OnInit {
   users: any;
-  constructor(private userdata: DatahubService) {
-    console.warn(' user details : ', userdata.users());
-    this.users = userdata.users();
+  constructor(private userdata: UserdataService) {
+    userdata.users().subscribe((data) => {
+      console.warn('data', data);
+      this.users = data;
+    });
   }
 
   ngOnInit(): void {}

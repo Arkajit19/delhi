@@ -11,9 +11,14 @@
 <h1><a routerLink="user/40">Sushant</a></h1><br><br>
 
 <router-outlet></router-outlet> -->
-<ul>
+<!-- <ul>
   <li *ngFor="let item of users">
     {{item.name}} : {{item.age}} : {{item.email}}
+  </li>
+</ul> -->
+<ul >
+  <li  *ngFor="let user of users">
+    {{user.name}}----{{user.email}}
   </li>
 </ul>
 <app-footer></app-footer>

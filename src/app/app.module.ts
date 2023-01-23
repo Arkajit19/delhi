@@ -10,7 +10,7 @@ import { InvalidpageComponent } from './invalidpage/invalidpage.component';
 import { AboutcompanyComponent } from './aboutcompany/aboutcompany.component';
 import { AboutemployeeComponent } from './aboutemployee/aboutemployee.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
